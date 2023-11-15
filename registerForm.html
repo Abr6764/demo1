@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add your CSS styles for the registration form here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        main {
+            padding: 20px;
+            text-align: start;
+        }
+        
+        .registration-form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .registration-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .registration-form input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .registration-form button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Course Registration</h1>
+    </header>
+    <main>
+        <div class="registration-form">
+            <form action="index.html">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="course">Selected Course:</label>
+                <input type="text" id="course" name="course" readonly>
+
+                <label for="description">Course Description:</label>
+                <textarea id="description" name="description" readonly></textarea>
+
+                <label for="duration">Duration:</label>
+                <input type="text" id="duration" name="duration" readonly>
+
+                <label for="fee">Registration Fee:</label>
+                <input type="text" id="fee" name="fee" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    
+    <script>
+        // Retrieve the selected course details from sessionStorage
+        var selectedCourseTitle = sessionStorage.getItem('selectedCourseTitle');
+        var selectedCourseDescription = sessionStorage.getItem('selectedCourseDescription');
+        var selectedCourseDuration = sessionStorage.getItem('selectedCourseDuration');
+
+        // Set the course details in the form
+        document.getElementById('course').value = selectedCourseTitle;
+        document.getElementById('description').value = selectedCourseDescription;
+        document.getElementById('duration').value = selectedCourseDuration;
+
+        // Other existing script content
+    </script>
+</body>
+</html>

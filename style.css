@@ -231,7 +231,7 @@ footer {
 
 /* Add this CSS to set a fixed size for slideshow images */
 .slide img {
-    width: 100%; /* Ensures the image takes the full width of its container */
+    width: 70%; /* Ensures the image takes the full width of its container */
     height: 300px; /* Adjust the height as needed */
     object-fit: cover; /* Ensures the image covers the entire container, maintaining its aspect ratio */
 }
@@ -291,7 +291,7 @@ footer {
     width: auto;
     padding: 16px;
     margin-top: -22px;
-    background-color: #f9f9f9;
+    background-color:none;
     color: #333;
     font-weight: bold;
     
@@ -306,7 +306,7 @@ footer {
 }
 
 .prev:hover, .next:hover {
-    background-color: #ccc;
+    background-color:none;
 }
 
 .container {
@@ -316,7 +316,7 @@ footer {
 
 .contact-form {
     background-color: #fff;
-    padding: 20px;
+    padding: 30px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -544,6 +544,11 @@ button:hover {
         border-radius: 5px;
         margin: 5px;
     }
+    .slide img {
+        width: 100%; /* Ensures the image takes the full width of its container */
+        height: 300px; /* Adjust the height as needed */
+        object-fit: contain; /* Ensures the image covers the entire container, maintaining its aspect ratio */
+    }
     .our-team{
         display:flex;
         flex-direction:column;
@@ -561,7 +566,7 @@ button:hover {
         display:flex;
         flex-direction:column;
         align-items: center;
-        width:100%;
+        width:80%;
         margin: 10px;
         padding: 20px;
         background-color: #fff;

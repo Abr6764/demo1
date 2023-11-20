@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.course {
+    display: flex;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden; /* Ensures child elements don't overflow outside the container */
+}
+
+.course img {
+    
+    width: 500px; /* Make sure the image doesn't exceed its original size */
+    height: 250px;
+    padding: 2%;
+}
+
+.course-info {
+    flex: 2; /* Adjust the ratio of space for course information */
+    padding: 15px;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+.register-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+@media only screen and (max-width: 800px){
+    main{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+    }
+    .course {
+        display: flex;
+        flex-direction:column;
+        border: 1px solid #ddd;
+        padding:20px;
+        margin-bottom: 20px;
+        background-color: white;
+        border-radius: 5px;
+        overflow: hidden; /* Ensures child elements don't overflow outside the container */
+    }
+    
+    .course img {
+        width: 500px; /* Make sure the image doesn't exceed its original size */
+        height: 250px;
+        padding:20px;
+    }
+} 
+@media only screen and (max-width: 800px){
+    .course img {
+        width: 100%; /* Make sure the image doesn't exceed its original size */
+        height: 250px;
+        padding:10px;
+    }
+}
